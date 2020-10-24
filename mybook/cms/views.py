@@ -5,7 +5,7 @@ from cms.models import Book
 def book_list(request):
     """書籍の一覧"""
     books = Book.objects.all().order_by('id')
-    return render(request,'cms/book_list.html',{book:books})
+    return render(request,'cms/book_list.html',{'book': books})
 
 
 def book_edit(request, book_id=None):
